@@ -38,7 +38,7 @@ const Header = () => {
                                 varient: "h6",
                             }}
                         >
-                                              <img src={btc} sx={{
+                                              <img src={btc} alt="h1" sx={{
                         marginTop : "30px",
                     }}></img> Crypto Mars
                         </Typography>

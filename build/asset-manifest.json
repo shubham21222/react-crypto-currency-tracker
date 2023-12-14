@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb0b52b7.css",
+    "main.js": "/static/js/main.012096fd.js",
+    "static/js/787.c4e26b62.chunk.js": "/static/js/787.c4e26b62.chunk.js",
+    "static/media/aq.jpg": "/static/media/aq.19419d69e5001e322fee.jpg",
+    "static/media/Free_btc-remove.png": "/static/media/Free_btc-remove.9b79e7d8121c0f95f02d.png",
+    "index.html": "/index.html",
+    "main.eb0b52b7.css.map": "/static/css/main.eb0b52b7.css.map",
+    "main.012096fd.js.map": "/static/js/main.012096fd.js.map",
+    "787.c4e26b62.chunk.js.map": "/static/js/787.c4e26b62.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb0b52b7.css",
+    "static/js/main.012096fd.js"
+  ]
+}
