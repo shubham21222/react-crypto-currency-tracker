@@ -1,0 +1,11 @@
+.table{
+    background-color: #4f00afc2;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+.table:hover{
+    background-color: #131111;
+}
+
+

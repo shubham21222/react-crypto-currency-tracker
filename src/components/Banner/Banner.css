@@ -1,0 +1,18 @@
+.banner{
+    
+    display: flex;
+    width: 300;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(-40px); /* Adjust the distance as needed */
+    }
+  }
+  
