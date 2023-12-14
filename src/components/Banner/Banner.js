@@ -52,7 +52,7 @@ const Banner = () => {
             >
               <img
                 src={btc2}
-                alt="BTC2 Image"
+                alt="BTC2"
                 style={{
                   height: "auto",
                   maxWidth: "100%",
@@ -70,7 +70,7 @@ const Banner = () => {
               Crypto Mars{" "}
               <img
                 src={btc}
-                alt="BTC Image"
+                alt="BTC"
                 style={{
                   height: "auto",
                   maxWidth: "100%",
