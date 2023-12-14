@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Coinpage from './pages/Coinpage';
@@ -7,10 +7,9 @@ import Home from './pages/Home';
 import "./App.css"
 
 const AppContainer = styled.div`
-  background-color: #14161a;
-  
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 24%, rgba(65,0,68,1) 74%);
   color: white;
-
 `;
 
 function App() {

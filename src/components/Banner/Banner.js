@@ -58,12 +58,12 @@ const Banner = () => {
                   maxWidth: "100%",
                   width: "100px",
                   position: "absolute",
-                  top: "145px",
-                  left: "70%", // Center horizontally
+                  top: "70px",
+                  left: "10%", // Center horizontally
                   transform: "translateX(-50%)", // Center horizontally
                   animation: "floatUpDown 2s infinite",
                   '@media (max-width: 600px)': {
-                    top: "50px", left: "20px",// Adjust top position for smaller screens
+                    top: "50px", right: "200px",// Adjust top position for smaller screens
                   },
                 }}
               />

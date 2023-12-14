@@ -141,28 +141,22 @@ const CoinsTable = () => {
 
     const handleSearch = () => {
         return coins.filter(
-            (coin) =>
-                coin.name.toLowerCase().includes(search) ||
-                coin.symbol.toLowerCase().includes(search)
+          (coin) =>
+            coin.name.toLowerCase().includes(search.toLowerCase()) ||
+            coin.symbol.toLowerCase().includes(search.toLowerCase())
         );
-    };
+      };
+      
 
 
     return (
-        <ThemeProvider theme={darkTheme} >
+        <ThemeProvider theme={darkTheme}  style={{ textAlign : "center" }}>
             <StyledContainer>
                 <Typography
                     variant="h4"
                     sx={{
-                        margin: 18,
-                        fontFamily: "Montserrat",
-                        textAlign: "justify",
-                        alignItems: "center",
-                        fontSize: "2rem", // Set your desired base font size
-                        '@media (max-width: 600px)': {
-                            fontSize: '1.5rem', // Adjust the font size for smaller screens
-                        },
-                    }}
+                        margin: 8,
+                        fontFamily: "Montserrat", }}
                 >
                     Cryptocurrency Prices by Market Cap
                 </Typography>
@@ -263,22 +257,32 @@ const CoinsTable = () => {
                 </StyledTableContainer>
 
                 <Pagination
-                    count={Math.ceil(handleSearch().length / 10)}
-                    sx={{
-                        padding: 20,
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        marginTop: "20px",
-                        '& .MuiPaginationItem-root': {
-                            color: 'white',  // Set the color to white
-                        },
-                    }}
-                    onChange={(_, value) => {
-                        setPage(value);
-                        window.scroll(0, 450);
-                    }}
-                />
+  count={Math.ceil(handleSearch().length / 10)}
+  sx={{
+    padding: 20,
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "20px",
+    '& .MuiPaginationItem-root': {
+      color: 'white',  // Set the color to white
+    },
+    '@media (max-width: 600px)': {
+      '& .MuiPaginationItem-root': {
+        fontSize: '0.8rem',  // Adjust the font size for smaller screens
+      },
+    },
+    '@media (max-width: 400px)': {
+      '& .MuiPaginationItem-root': {
+        fontSize: '0.7rem',  // Further adjust the font size for even smaller screens
+      },
+    },
+  }}
+  onChange={(_, value) => {
+    setPage(value);
+    window.scroll(0, 450);
+  }}
+/>
 
 
 
