@@ -8,6 +8,7 @@ import { chartDays } from '../config/data';
 import { CryptoState } from '../CryptoContext';
 import styled from 'styled-components';
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip } from 'chart.js';
+import { useCallback } from 'react';
 
 // Register the required components
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip);
@@ -37,7 +38,9 @@ const CoinInfo = ({ coin }) => {
     },
   }));
 
-  const fetchHistoricData = async () => {
+
+
+  const fetchHistoricData = useCallback(async () => {
     try {
       const { data } = await axios.get(HistoricalChart(coin.id, days, currency));
       setFlag(true);
@@ -45,13 +48,15 @@ const CoinInfo = ({ coin }) => {
     } catch (error) {
       console.error('Error fetching historical data:', error);
     }
-  };
-
+  }, [coin, days, currency]);
+  
   useEffect(() => {
     if (coin) {
       fetchHistoricData();
     }
-  }, [days, currency, coin && coin.id]);
+  }, [fetchHistoricData,coin]);
+  
+  
 
   const darkTheme = createTheme({
     palette: {
