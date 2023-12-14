@@ -77,6 +77,7 @@ const Banner = () => {
                   position: "relative",
                   alignItems: "center",
                   animation: "floatUpDown 2s infinite",
+                  
                   '@media (max-width: 600px)': {
                     marginBottom: "15px", // Adjust margin for smaller screens
                   },
